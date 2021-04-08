@@ -1,5 +1,6 @@
-# Twitch Stream Notifyer
-Discord bot that will be able to keep your members up-to-date whenever a streamer goes live. Uses the Official Twitch Api
+# Twitch Stream Notification Bot
+This Discord bot will automatically send a message and tag the assigned role whenever a streamer went live.
+The notifications will update every 10 minutes(default) while the streamer is live.
 
 # How does it work?
 This Discord bot uses [The Official Twitch Api](https://dev.twitch.tv/docs/api/). You will be able to assign unlimited streamers to the bot. The bot uses the api to fetch the channel data to see if the streamer is live. If the streamer is live it will send a message in the assigned channel and it will also tag the assigned role. You will be able to choose the update time. If the streamer is still live the bot will update the message after X amount of time (default 10 minutes).  
@@ -45,6 +46,8 @@ After that open the config.json file
 - roleID - Copy and past the Discord Role ID here (This field is NOT required. Please assign "" to this if you don't want to tag any roles).
 
 NOTE: Do NOT add anything in the fields that are already empty. These fields will automatically update.
+Some of values in the config.json template have "(NOT REQUIRED)" in it. If you are not using this replace it with an empty string.
+```"DISCORD_SERVER_INVITE_URL(NOT REQUIRED)" --> ""```
 
 ## Add streamers
 In the config.json there is a channels array. If you want to add streamers you just add new objects to this array.
